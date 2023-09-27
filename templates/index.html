@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Diabetes prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Diabetes Prediction System Using Machine Learning</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+      </ul>
+
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <h5 style="text-align: center; color: brown; font-weight: 600;">{{pred}}</h5>
+      <h2 class="header center orange-text">Diabetes Prediction System</h2>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of a patient having Diabetes. Enter the patient details below:
+        <br>
+        </h5>
+        <h6 class="header col s12 light">Respective attribute values of a healthy human are given adjacently. <h6>
+        <h6 class="header col s12 light">Please enter the values within mentioned ranges. Outlying values may cause inaccuracy.<h6>
+      </div>
+
+
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Pregnancies (Range: 0-10)</b></label>
+                    <br>
+                    <input placeholder="No. of Pregnancies" name="1" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Glucose (Range: 0-199) mg/dL</b></label>
+                    <br>
+                    <input id="last_name" name="2" placeholder="Glucose level in sugar"  type="text" class="validate">
+    
+                </div>
+    
+                <div class="input-field col s4">
+                    <label for="_name"><b>BloodPressure (Range: 0-122 mm Hg)</b></label>
+                    <br>
+                    <input id="_name" name="3" placeholder="BloodPressure" type="text" class="validate">
+    
+                </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>SkinThickness(Range: 0-100 mm)</b></label>
+                    <br>
+                    <input placeholder="SkinThickness" name="4" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Insulin (Range 0-400 muU/ml)</b></label>
+                    <br>
+                    <input id="last_name" name="5" placeholder="Insulin level"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                  <label ><b>BMI (Range: 0-70 kg/m)</b></label>
+                  <br>
+                  <input name = '6' placeholder="Body Mass Index">
+
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Diabetes Pedigree Function (Range: 0-2.5) </b></label>
+                    <br>
+                    <input id="last_name" name="7" placeholder="DiabetesPedigreeFunction"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Age (in Years)</b></label>
+                    <br>
+                    <input id="_name" name="8" placeholder="Age" type="text" class="validate">
+                </div>
+    
+          </div>
+    
+          <div class="row center">
+    
+              <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability Now</button>
+
+          </div>
+        </form>
+  </div>
+
+      <br>
+
+     
+    <br><br>
+  </div>
+  </div>
+  <footer class="page-footer light blue lighten-1">
+    <div class="footer-copyright light blue lighten-1">
+      <div class="container" style="padding-bottom: 0.001rem; font-size: 1.3rem; margin-left: 5rem;">
+        <p>Minor Project by Akash Kachhaway</p>
+      </div>
+    </div>
+   </div>
+</footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
